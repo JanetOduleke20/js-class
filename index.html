@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INTRO TO JS</title>
+    
+</head>
+<body>
+    <h5>Welcome to Ile Agbara</h5>
+    <p id="display"></p> 
+
+    <input type="text" id="box">
+    <!-- Event handlers - handle functions e.g onclick  -->
+    <button onclick="myFunc()">Click me</button> 
+
+    <div style="width: 500px; height: 250px; background-color: teal; margin-top: 10px;" id="hidenseek"></div>
+    <button onclick="toggleAppear()">Disappear</button>
+    
+
+
+    <script>
+        // Variables
+        //  let, var, const - Variable identifiers
+        var student = "Jamiu"; 
+        let a = 5;
+        let students = ['Oxford', 'Wale', 'Adeleke', 'Ikechukwu', 'Maleek', 'Excel', 'Paul', 6, 8, 90, ['Janet', 'Kunle']];
+
+        // key-value pair
+        const studentInfo = {
+            name: 'Oxford',
+            matricNo: "Oxford29089",
+            course: 'Data science'
+        };
+
+
+
+        let check = true;
+
+        // Data types - string, number, array, object, boolean
+        // [] - angle bracket () - parenthesis {} - curly bracket/braces
+
+        // Naming conventions
+        // 1. A variable name cannot start with a number but the number can be in the middle or at the end but never at the beginning
+        const student1 = [];
+        
+        // 2. Variable names cannot have a whitespace
+        const nameofstudent = 'Adeleke';
+        // Casings in JS
+        const nameOfStudent = 'Oxford' // camel casing
+        const NameOfStudent = 'Joy'; // Pascal casing
+        const name_of_the_student = 'Jezebel' // Snake casing
+        
+        console.log(nameofstudent);
+        // 3. A variable name cannot be the name of a Javascript attribute
+        // const false = 90;
+        
+        // 4. A variable name should speak of what the value is
+        const name = "Janet"
+
+        // Outputting variables
+        console.log("Janet", 5, ['Joy']);
+        // alert("Welcome to SQI");
+
+        document.getElementById('display').innerHTML = 'Welcome to LAUTECH' + '<br>';
+        document.getElementById('display').innerHTML += 'Welcome to Day 2' + '<br>'
+
+        document.getElementById('display').innerText += 'Another one' 
+        
+        // Styling
+        document.getElementById('display').style.color = 'green';
+        document.getElementById('display').style.marginBottom = '40px'
+        document.getElementById('display').style.backgroundColor = '#ff34'
+
+        
+        function myFunc() {
+            let boxValue = document.getElementById('box').value;
+            console.log(boxValue);
+            
+            // console.log(document.getElementById('box').value);
+        }
+
+        function toggleAppear() {
+            document.getElementById('hidenseek').style.display = 'none'
+        }
+
+
+
+
+    </script>
+</body>
+</html>
